@@ -5,7 +5,7 @@ Library    Collections
 
 *** Variables ***
 ${URL}    https://app.impact.com
-${BROWSER}    safari
+${BROWSER}    firefox
 ${username}    sjayabal@forbesadvisor.com
 ${password}    sanjai123&
 
@@ -13,10 +13,12 @@ ${password}    sanjai123&
 OPEN GOOGLE
     [Documentation]    Open Google and perform a search
     Open Browser    ${URL}    ${BROWSER}
-    Sleep    5
+    Set Selenium Implicit Wait    5s
+
     Maximize Browser Window
-    Sleep    3
-    #Click Element    Xpath = //*[@id="wBIvQ7"]/div/label/input
+    
+    Sleep    5
+    Click Element    xpath=//span[text()='Verify you are human']
     Wait Until Element Is Enabled    id=j_username
     LogintoImpact    ${username}    ${password}
    
