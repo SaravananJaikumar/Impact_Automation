@@ -4,9 +4,10 @@ Library    cloudflare_bypass
 
 
 
+
 *** Variables ***
 ${URL}    https://app.impact.com
-${BROWSER}    uc.Chrome
+${BROWSER}    Chrome
 ${username}    sjayabal@forbesadvisor.com
 ${password}    sanjai123&
 
