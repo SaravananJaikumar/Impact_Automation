@@ -1,18 +1,19 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    String
-Library    Collections
+Library    cloudflare_bypass
+
+
 
 *** Variables ***
 ${URL}    https://app.impact.com
-${BROWSER}    firefox
+${BROWSER}    uc.Chrome
 ${username}    sjayabal@forbesadvisor.com
 ${password}    sanjai123&
 
 *** Test Cases ***
 OPEN GOOGLE
     [Documentation]    Open Google and perform a search
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser   ${URL}    ${BROWSER}
     Set Selenium Implicit Wait    5s
 
     Maximize Browser Window
@@ -33,3 +34,8 @@ LogintoImpact
     Input Text    id=j_password    ${password}
     Click Button    id=loginButton
     #Wait Until Page Contains Element    id=dashboard
+
+
+
+    
+
